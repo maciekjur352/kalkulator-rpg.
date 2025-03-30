@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kalkulator Tuningu</title>
+    <link rel="icon" href="logo3.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <img src="background.png" alt="background" class="background">
+
+            <a href="https://projectrpg.pl">
+            <img src="logo.png" alt="Logo" class="logo">
+            </a>
+    </header>
+
+    <section class="calculator">
+
+        <h2>Kalkulator Tuningu Aut</h2>
+
+        <div class="search-bar">
+            <h2>
+                <label for="search">Wyszukiwarka Wizu:</label>
+                <input type="number" id="search" placeholder="Wpisz ID" min="0" class="wysz">
+                <button class="button" onclick="searchOption()">Szukaj</button>
+            </h2>
+        </div>
+
+        <div class="salon2">
+            <label for="salon">Wybierz Salon:</label>
+            <select id="salon">
+                <option value="1" disabled selected>Wybierz Salon</option>
+                <option value="Cygan Angel Pine">Cygan Angel Pine</option>
+                <option value="Salon Doherty">Salon Doherty</option>
+                <option value="Salon Downtown">Salon Downtown</option>
+                <option value="Salon Exclusive">Salon Exclusive</option>
+                <option value="Salon terenowy">Salon terenowy</option>
+                <option value="Salon z pojazdami dostawczymi">Salon z pojazdami dostawczymi</option>
+                <option value="Salon Lowriderów">Salon Lowriderów</option>
+                <!-- Add other salons -->
+            </select>
+        </div>
+        
+        <div class="vehicle2">
+            <label for="vehicle">Wybierz Pojazd:</label>
+            <select id="vehicle">
+            </select>
+        </div>
+        <hr>
+        <div class="select">  
+
+            <h3>Mechaniczny</h3>
+        
+            <label for="ecu">Tuning Ecu:</label>
+            <img src="kulko.png" class="kulko"><select id="ecu">
+            </select>
+        
+            <label for="turbo">Tuning Turbo:</label>
+            <img src="kulko.png" class="kulko"><select id="turbo">
+            </select>
+        
+            <label for="zestaw">Tuning Zestaw:</label>
+            <img src="kulko.png" class="kulko"><select id="zestaw">
+            </select>
+
+            <label for="cfi">Tuning CFI:</label>
+            <img src="kulko.png" class="kulko"><select id="cfi">
+            </select>
+        
+            <label for="naped">Tuning Napęd:</label>
+            <img src="kulko.png" class="kulko"><select id="naped">
+            </select>
+        
+            <label for="bakPaliwa">Tuning BakPaliwa:</label>
+            <img src="kulko.png" class="kulko"><select id="bakPaliwa">
+            </select>
+
+            <label for="lpg">Tuning Lpg:</label>
+            <img src="kulko.png" class="kulko"><select id="lpg">
+            </select>
+        
+            <label for="dodatki">Tuning Dodatki:</label>
+            <img src="kulko.png" class="kulko"><select id="dodatki">
+            </select>
+
+        </div>
+
+        <!-- select2 -->
+
+        <div class="select">
+
+            <h3>tuning wizualny</h3>
+
+            <label for="bodykit">Tuning Bodykit:</label>
+            <img src="kulko.png" class="kulko"><select id="bodykit">
+            </select> 
+
+            <label for="Reflektory">Tuning Reflektory:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Reflektory">
+            </select>
+
+            <label for="progi">Tuning Progi:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="progi">
+            </select>
+
+            <label for="Wydechy">Tuning Wydechy:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Wydechy">
+            </select>
+
+            <label for="felgi">Tuning Felgi:</label>
+            <img src="kulko.png" class="kulko"><select id="felgi">
+            </select>
+        
+            <label for="Wentyle">Tuning Wentyle:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Wentyle">
+            </select>
+            
+            <label for="Maski">Tuning Wentyl Maska:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Maski">
+            </select>
+
+            <label for="Dachy">Tuning Wentyl Dach:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Dachy">
+            </select>
+
+
+        </div> 
+
+        <!-- select3 -->
+
+        <div class="select">
+
+            <h3>tuning wizualny</h3>
+
+            <label for="przednielampy">Tuning Przednie Lampy:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="przednielampy">
+            </select>
+
+            <label for="tylnelampy">Tuning Tylne Lampy:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="tylnelampy">
+            </select>
+
+            <label for="spojlery">Tuning Spojler:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="spojlery">
+            </select>
+
+            <label for="ZderzakiPrzednie">Tuning Zderzak Przedni:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="ZderzakiPrzednie">
+            </select>
+
+            <label for="ZderzakiTylne">Tuning Zderzak Tylni:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="ZderzakiTylne">
+            </select>
+
+            <h3>Wulkanizacja</h3>
+
+            <label for="Felgi">Tuning Felgi Wielkość:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Felgi">
+            </select>
+        
+            <label for="Po">Poszerzenia (Przód . Tył):</label>
+            <img src="kulko.png" class="kulko">
+            <select id="Po">
+            </select>
+
+        </div>
+
+        <!-- select4 -->
+
+        <div class="select">
+
+            <h3>Komponety</h3>
+
+            <label for="engine"></i>Tuning Silnika:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="engine">
+            </select>
+
+            <label for="apk">Aplikacja Transportowa:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="apk">
+            </select>
+
+            <label for="klucz">Tuning Klucze:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="klucz">
+            </select>
+
+            <label for="licznik">Tuning Licznik:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="licznik">
+            </select>
+
+            <label for="lampy">Tuning Lampy:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="lampy">
+            </select>
+
+            <label for="szyby">Tuning Szyby:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="szyby">
+            </select>
+
+            <label for="warianty">Tuning Warianty:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="warianty">
+            </select>
+        </div>
+    
+        
+        <div class="slidecontainer">
+            <p>Wartość suwaka Mechaniczny: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Ecu,Turbo,Napęd,BakPaliwa,Dodatki,Radio,CB-Radio,<br>,Ogranicznik,Wykrywaćż Fotoradarów,ABS,Klucze</span></span><span id="demo2"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange2">
+
+            <p>Wartość suwaka Zestaw: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Zestaw</span></span><span id="demo13"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange13">
+        
+            <p>Wartość suwaka CFI: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: CFI</span></span><span id="demo3"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange3">
+
+            <p>Wartość suwaka LPG: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: LPG</span></span><span id="demo8"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange8">
+
+            <p>Wartość suwaka Silnik: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Silnik</span></span><span id="demo7"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange7">
+        
+            <p>Wartość suwaka lampy: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Lampy</span></span><span id="demo5"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange5">
+        
+            <p>Wartość suwaka Licznik: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Licznik</span></span><span id="demo6"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange6">
+
+            <p>Wartość suwaka Body kit: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Body Kit</span></span><span id="demo"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange">
+
+            <p>Wartość suwaka Wizu: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Felgi Wielkość,Felgi,Poszerzenie,Tylne Lampy,Przednie Lampy,wentyle,Progi,<br>,Wentyle Dach,Reflektory,Wentyl Maska,Spojler,Wydech,Zderzyk Przedni,Zderzak Tylni,Warianty</span></span><span id="demo4"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange4">
+
+        </div>  
+        
+        
+        <div class="policztune">
+            <!-- Other tuning options -->
+            <button class="button" onclick="calculateTotal(event)">
+                <!-- <div class="demo"> -->
+                        <!-- <a href="#"> -->
+                            Policz tune
+                        <!-- </a> -->
+                <!-- </div> -->
+            </button>
+        
+        
+            <!-- tune z % -->
+
+            <div id="znizka" class="statystyka"></div>  <!-- tune mechaniczne -->
+            <div id="znizka13" class="statystyka"></div><!-- tune zestaw -->
+            <div id="znizka3" class="statystyka"></div> <!-- tune cfi -->
+            <div id="znizka9" class="statystyka"></div> <!-- tune LPG -->
+            <div id="znizka8" class="statystyka"></div> <!-- tune Silnik -->
+            <div id="znizka6" class="statystyka"></div> <!-- tune Lampy -->
+            <div id="znizka7" class="statystyka"></div> <!-- tune licznik -->
+            <div id="znizka2" class="statystyka"></div> <!-- tune bodykit -->
+            <div id="znizka5" class="statystyka"></div> <!-- tune wizu -->
+
+            <h2><div id="znizka4"></div></h2>  <!-- tune bodykit + mechaniczny -->
+        </div>
+        <div class="tuning-checkbox">
+            <label for="dodatki2">Radio:<input type="checkbox" id="dodatki2">|</label>
+            <label for="dodatki3">CB-Radio:<input type="checkbox" id="dodatki3">|</label>
+            <label for="dodatki4">Ogranicznik:<input type="checkbox" id="dodatki4">|</label>
+            <label for="dodatki5">Wykrywacz Fotoradarów:<input type="checkbox" id="dodatki5">|</label>
+            <label for="dodatki6">System ABS:<input type="checkbox" id="dodatki6">|</label>
+        <!-- </div> <div style="clear:both"></div> -->
+
+    </section>
+        
+         <!-- Bike calculator -->
+    <section class="calculator">
+        <h2>Kalkulator Tuningu Motorów</h2>
+        <div class="salon2">
+            <label for="salon3">Wybierz Salon:</label>
+            <select id="salon3">
+                <option value="2" disabled selected>Wybierz Salon</option>
+                <option value="Salon motocyklowy">Salon motocyklowy</option>
+            </select>
+        </div>  
+        <div class="vehicle2">
+            <label for="vehicle3">Wybierz Motor:</label>
+            <select id="vehicle3">
+            </select>
+        </div>  
+
+        <hr>
+
+        <div class="select">  
+
+            <h3>Mechaniczny</h3>
+
+            <label for="engine2">Tuning silnika:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="engine2">
+            </select>
+
+            <label for="ecu2">Tuning Ecu:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="ecu2">
+            </select>
+        
+            <label for="turbo2">Tuning Turbo:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="turbo2">
+            </select>
+        
+            <label for="zestaw2">Tuning zestaw:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="zestaw2">
+            </select>
+        
+
+        </div>
+
+        <div class="select">
+
+            <h3>Komponety</h3>
+
+            <label for="klucz2">Tuning Klucze:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="klucz2">
+            </select>
+
+            <label for="licznik2">Tuning Licznik:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="licznik2">
+            </select>
+        
+            <label for="lampy2">Tuning Lampy:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="lampy2">
+            </select>
+
+            <label for="bodykit2">Tuning Bodykit:</label>
+            <img src="kulko.png" class="kulko">
+            <select id="bodykit2">
+            </select> 
+
+        </div>  
+
+        <div class="slidecontainer">
+
+            <p>Wartość suwaka Mechaniczny: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: ECU,Turbo,Zestaw,Klucze</span></span><span id="demo10"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange10">
+
+            <p>Wartość suwaka Zestaw: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Zestaw</span></span><span id="demo14"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange14">
+            
+            <p>Wartość suwaka Wizu: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Lampy,Licznik</span></span><span id="demo11"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange11">
+
+            <p>Wartość suwaka Bodykit: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Body Kit</span></span><span id="demo9"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange9">
+
+            <p>Wartość suwaka Silnik: <span class="circle-button"><span class="zapytanie">?</span><span class="tooltip">Zawiera: Silnik</span></span><span id="demo12"></span></p>
+            <input type="range" min="0" max="100" value="50" id="myRange12">
+        </div>
+
+        <div class="policztune">
+            <!-- Other tuning options -->
+            <button class="button" onclick="calculateTotal2(event)"><div class="demo"><p><a href="#">Policz tune</a></p></div></button>
+            <div id="total11"></div>
+
+            <div id="znizka12" class="statystyka"></div>  <!-- tune mechaniczne -->
+            <div id="znizka17" class="statystyka"></div>  <!-- tune zestaw -->
+            <div id="znizka16" class="statystyka"></div>  <!-- tune wizu -->
+            <div id="znizka10" class="statystyka"></div>  <!-- tune bodykit -->
+            <div id="znizka14" class="statystyka"></div>  <!-- tune engine -->
+            <h2><div id="znizka11"></div></h2>  <!-- tune all -->
+
+        </div>
+
+        <div class="tuning-checkbox">
+            <label for="dodatki7">radio:<input type="checkbox" id="dodatki7">|</label>
+            <label for="dodatki8">CB-radio:<input type="checkbox" id="dodatki8">|</label>
+            <label for="dodatki9">Ogranicznik:<input type="checkbox" id="dodatki9">|</label>
+            <label for="dodatki10">Wykrywacz fotoradarów:<input type="checkbox" id="dodatki10">|</label>
+        </div> 
+        <div style="clear:both"></div>
+
+        <!-- </div> -->
+        <!-- Kalkulator tuningu pojazdów by maciekjur -->
+    </section>
+
+    <script src="baza/aplikacja-transportowa.js"></script>
+    <script src="baza/tuning.js"></script>
+    <script src="baza/silniki.js"></script>
+    <script src="baza/tylne-lampy.js"></script>
+    <script src="baza/przednie-lampy.js"></script>
+    <script src="baza/warianty.js"></script>
+    <script src="baza/tuning-wizualny.js"></script>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

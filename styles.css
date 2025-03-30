@@ -1,0 +1,189 @@
+.demo, .demo p, .demo p a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+}
+
+.demo p a:hover {
+  color: #FFB443;
+}
+
+body {
+    background-color: #151515;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    float: left;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+}
+
+.logo {
+    float: left;
+    width: 15%;
+    height: auto;
+    transform: scale(0.9);
+    transition: .5s;
+    z-index: 2;
+    position: absolute;
+    margin: 1%;
+}
+.logo:hover {
+    transform: scale(1.0)
+    }
+
+.calculator {
+    background-color: #222222;
+    border-radius: 25px;
+    width: 90%; 
+    color: white;
+    float: left;
+    position: relative;
+    z-index: 1;
+    margin-top: 13%;
+    padding: 1%;
+    margin-left: 4%;
+}
+
+.calculator h2 {
+    width: 50%;
+    float: left;
+}
+
+.calculator .search-bar h2{
+    width: 50%;
+    float: left;
+
+    text-align: right;
+}
+
+.calculator .salon2{
+    width: 100%;
+    float: left;
+}
+
+.calculator .vehicle2{
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.tuning-checkbox{
+    width: 64%;
+    float: left;
+}
+
+.calculator .policztune h2{
+    width: 100%;
+}
+
+.select{
+    width: 16%;
+    height: auto;
+    float: left;
+}
+
+.select label{
+    width: 100%;
+    height: auto;
+    float: left;
+    margin-bottom: 5%;
+}
+
+.select select{
+    width: 85%;
+    float: left;
+    font-family: 'Arial';
+    cursor: pointer;
+    border: 0px solid #ffffff;
+    background: #222222;
+    color: #ffffff;
+    -webkit-appearance: none;
+    z-index: 1;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
+.select .kulko{
+    width: 6%;
+    float: left;
+}
+
+
+.slidecontainer{
+    width: 16%;
+    height: auto;
+    float: left;
+    accent-color: #FFB443;
+}
+
+.policztune{
+    width: 20%;
+    height: auto;
+    float: left;
+    text-align: center;
+}
+
+.button {
+    background-color: transparent;
+	border:1px solid transparent;
+    color: white;
+    font-size: large;
+    margin-bottom: 5%;
+}
+
+.button:hover{
+    color: #FFB443;
+}
+
+.select select:hover {
+    color: #FFB443;
+}
+
+.select .fa-circle {
+    transform: translateY(200%);
+    color: #FFB443; /* Kolor kropki */
+}
+
+.circle-button {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #FFB443;
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    float: right;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222222;
+    color: #FFB443;
+    border-radius: 5px;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.circle-button:hover .tooltip {
+    visibility: visible;
+}
+
+
+.policztune .statystyka{
+    margin-bottom: 5%;
+}
+
+hr{
+    width: 100%;
+    border-color: #393939;
+    background-color: #393939;
+}
