@@ -47,6 +47,20 @@ body {
     margin-top: 13%;
     padding: 1%;
     margin-left: 4%;
+    margin-bottom: 5%;
+}
+
+.calculator2{
+    background-color: #222222;
+    border-radius: 25px;
+    width: 90%; 
+    color: white;
+    float: left;
+    position: relative;
+    z-index: 1;
+    padding: 1%;
+    margin-left: 4%;
+    margin-bottom: 5%;
 }
 
 .calculator h2 {
@@ -66,20 +80,20 @@ body {
     float: left;
 }
 
-.calculator .vehicle2{
+.vehicle2{
     width: 100%;
     float: left;
     margin-top: 1%;
     margin-bottom: 1%;
 }
 
+.calculator .policztune h2{
+    width: 100%;
+}
+
 .tuning-checkbox{
     width: 64%;
     float: left;
-}
-
-.calculator .policztune h2{
-    width: 100%;
 }
 
 .select{
@@ -114,6 +128,15 @@ body {
     float: left;
 }
 
+.select select:hover {
+    color: #FFB443;
+}
+
+.select .fa-circle {
+    transform: translateY(200%);
+    color: #FFB443; /* Kolor kropki */
+}
+
 
 .slidecontainer{
     width: 16%;
@@ -139,15 +162,6 @@ body {
 
 .button:hover{
     color: #FFB443;
-}
-
-.select select:hover {
-    color: #FFB443;
-}
-
-.select .fa-circle {
-    transform: translateY(200%);
-    color: #FFB443; /* Kolor kropki */
 }
 
 .circle-button {
