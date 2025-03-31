@@ -138,7 +138,6 @@ body {
     color: #FFB443; /* Kolor kropki */
 }
 
-
 .slidecontainer{
     width: 16%;
     height: auto;
@@ -219,10 +218,15 @@ hr{
     font-size: 1.2vw;
 }
 
-.slidecontainer input{
-    font-size: 0.8vw;
+.slidecontainer input {
     width: 10vw;
-    line-height: 1rem
+    height: 0.5vw;
+}
+
+.slidecontainer .circle-button{
+    font-size: 0.8vw;
+    width: 1vw;
+    height: 1vw;
 }
 
 .tuning-checkbox input{
@@ -233,3 +237,25 @@ hr{
 .policztune button{
     font-size: 1.2vw;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ffb443 none;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffb443;
+    border-radius: 10px;
+    border: 3px solid none;
+  }
