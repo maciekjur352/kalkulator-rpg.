@@ -12,6 +12,7 @@
 body {
     background-color: #151515;
     font-family: Arial, sans-serif;
+    font-size: 0.85vw;
 }
 
 .background {
@@ -200,4 +201,35 @@ hr{
     width: 100%;
     border-color: #393939;
     background-color: #393939;
+}
+
+.salon2 select, .vehicle2 select{
+    font-size: 0.8vw;
+}
+
+.select select{
+    font-size: 0.8vw;
+}
+
+.search-bar input{
+    font-size: 0.8vw;
+}
+
+.search-bar button{
+    font-size: 1.2vw;
+}
+
+.slidecontainer input{
+    font-size: 0.8vw;
+    width: 10vw;
+    line-height: 1rem
+}
+
+.tuning-checkbox input{
+    width: 1vw;
+    height: 0.7vw;
+}
+
+.policztune button{
+    font-size: 1.2vw;
 }
