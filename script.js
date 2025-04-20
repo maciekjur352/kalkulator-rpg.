@@ -53,6 +53,7 @@ const vehicles = {
         'Washington' : 47000,//apk
         'Windsor' : 120000,
         'Willard' : 44000,
+        'Willard Kombi' : 44000,
     },
     "Salon Downtown": {
         'Alpha' : 110000, //body

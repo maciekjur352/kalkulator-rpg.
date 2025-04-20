@@ -415,4 +415,5 @@ const wariantyPrices = {
         "Cabrio":15000
     },
 	"Willard":{"brak": 0,},
+	"Willard Kombi":{"brak": 0,},
 };

@@ -563,6 +563,7 @@ const tuningPrices = {
     "Slamvan":{"brak": 0,},
     "Voodoo":{"brak": 0,},
     "Willard":{"brak": 0,},
+    "Willard Kombi":{"brak": 0,},
 
     "Po": {
         "0.0": 0,

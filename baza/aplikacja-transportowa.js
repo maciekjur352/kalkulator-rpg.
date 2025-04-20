@@ -143,6 +143,10 @@ const ApkPrices = {
         "brak": 0,
         "Posiada": 15000,
     },
+    "Willard Kombi": {
+        "brak": 0,
+        "Posiada": 15000,
+    },
     "Bobcat":{"brak":0},
     "Bravura":{"brak":0},
     "Clover":{"brak":0},
