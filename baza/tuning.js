@@ -505,6 +505,7 @@ const tuningPrices = {
     "Elegant":{
         "brak": 0,
         "Elegant Custom": 68000,
+        "Elegant STR": 8000,
 },
     "Emperor":{
         "brak": 0,
