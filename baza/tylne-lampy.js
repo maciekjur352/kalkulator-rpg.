@@ -308,6 +308,7 @@ const tylnelampyPrices = {				//TYLNE LAMPY                      ---------------
 		"brak": 0,
 	},
     "Hermes":{"brak":0},
+	"Journey":{"brak":0},
 	"Willard":{"brak":0},
 	"Willard Kombi":{"brak":0}
 	};

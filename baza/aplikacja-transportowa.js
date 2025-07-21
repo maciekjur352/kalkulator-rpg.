@@ -214,5 +214,6 @@ const ApkPrices = {
     "Slamvan":{"brak":0},
     "Tornado":{"brak":0},
     "Voodoo":{"brak":0},
-    "Hermes":{"brak":0}
+    "Hermes":{"brak":0},
+    "Journey":{"brak":0}
 };

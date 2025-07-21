@@ -29,6 +29,7 @@ const vehicles = {
         'Fortune 240SX'	: 110000,
         'Glendale' : 35000,//apk
         'Greenwood' : 18000,//apk
+        'Journey' : 70000,
         'Majestic' : 34000, //body
         'Manana DTM' : 88000,
         'Merit' : 70000,//apk
@@ -134,6 +135,51 @@ const vehicles2 = {
     }
 };
 
+const colorMap = {
+  "Marchwiowy": "rgb(255, 165, 0)",
+  "Pomarańczowy": "rgb(255, 69, 0)",
+  "Żółty": "rgb(255, 255, 0)",
+  "Limonka": "rgb(147, 246, 0)",
+  "Różowy": "rgb(255, 140, 240)",
+  "Niebieski": "rgb(0, 0, 255)",
+  "Zielony": "rgb(20, 140, 0)",
+  "Fioletowy": "rgb(128, 0, 128)",
+  "Czerwony": "rgb(255, 0, 0)",
+  "Lazurowy": "rgb(0, 127, 255)",
+  "Aqua": "rgb(30, 200, 255)",
+  "Miętowy": "rgb(0, 102, 51)",
+  "Złoty": "rgb(226, 200, 105)",
+  "Kiwi": "rgb(66, 245, 182)",
+  "Pistacja": "rgb(0, 255, 148)",
+  "Jadeitowy": "rgb(0, 128, 128)",
+  "Purpurowy": "rgb(102, 0, 51)",
+  "Malinowy": "rgb(235, 1, 101)",
+  "Magneta": "rgb(255, 0, 255)",
+  "Czekoladowe": "rgb(102, 51, 0)",
+  "Ocean": "rgb(51, 102, 204)",
+  "Lodowy": "rgb(0, 255, 251)",
+  "Herbaciany": "rgb(204, 93, 43)",
+  "Cynamonowy": "rgb(157, 91, 3)",
+  "Butelkowa Zieleń": "#326647",
+  "Ametysowy": "#9966cc",
+  "Różany": "#bc8f8f",
+  "Very Peri": "#6868ac",
+  "Rubinowy": "#78120b",
+  "Winogronowy": "#6605b5",
+  "Oliwkowy": "#808000",
+  "Wiśniowy": "#dc143c",
+  "Eozyna": "#c35c6f",
+  "Gruszkowy": "#bce271",
+  "Luka": "#0a3c63",
+  "Xenon": "#6e9bd7",
+  "Oldtimer": "#d2c896",
+  "LIMITOWANE Lawendowe": "#745387",
+  "LIMITOWANE Miodowe": "#d5ad42",
+  "LIMITOWANE Kobaltowe": "#0047ab",
+  "LIMITOWANE Dyniowe": "#e37e0b",
+  "LIMITOWANE Trujące": "#46bd0b",
+  "LIMITOWANE Cukierkowy róż": "#fa8072"
+};
 
 // --- Funkcja pomocnicza (globalna) do wypełniania selectów ---
 function populateOptions(selectElement, options) {
@@ -143,6 +189,19 @@ function populateOptions(selectElement, options) {
       const option = document.createElement("option");
       option.value = key;
       option.textContent = key;
+
+      // Jeśli to select lampy, ustaw kolor
+      if (
+        selectElement.id === "lampy" ||
+        selectElement.id === "lampy2" ||
+        selectElement.id === "licznik" ||
+        selectElement.id === "licznik2"
+      ) {
+        if (colorMap[key]) {
+          option.style.color = colorMap[key];
+        }
+      }
+
       selectElement.appendChild(option);
     }
   }
