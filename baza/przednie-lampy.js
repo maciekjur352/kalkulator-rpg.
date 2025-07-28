@@ -309,6 +309,7 @@ const przednielampyPrices = {				//PRZEDNIE LAMPY
 	},
     "Hermes":{"brak":0},
 	"Journey":{"brak":0},
+	"Stanier":{"brak":0},
 	"Willard":{"brak":0},
 	"Willard Kombi":{"brak":0}
 };

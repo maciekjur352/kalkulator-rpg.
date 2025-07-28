@@ -543,6 +543,13 @@ const tuningPrices = {
         "brak": 0,
         "Solair Custom": 46000,
     },
+    "Stanier":{
+        "brak": 0,
+        "Stanier LX": 20000,
+        "Stanier Marauder": 65000,
+        "Stanier LX Aero": 25000,
+        "Stanier Marauder Aero": 70000,
+    },
     "Stallion":{"brak": 0,},
     "Stallion GTT":{"brak": 0,},
     "Stratum":{"brak": 0,},

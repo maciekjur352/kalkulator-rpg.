@@ -55,6 +55,7 @@ const vehicles = {
         'Windsor' : 120000,
         'Willard' : 44000,
         'Willard Kombi' : 44000,
+        'Stanier' : 120000,
     },
     "Salon Downtown": {
         'Alpha' : 110000, //body

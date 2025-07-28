@@ -60,9 +60,15 @@ const wariantyPrices = {
 	},
 	"Admiral":{				//Doherty
 		"brak": 0,
+		"Szyberdach": 10000,
+		"Relingi": 5000,
+		"Szyberdach + relingi":15000,
 	},
 	"Admiral Kombi":{
 		"brak": 0,
+		"Szyberdach": 10000,
+		"Relingi": 5000,
+		"Szyberdach + relingi":15000,
 	},
 	"Blista Compact":{
 		"brak": 0,
@@ -417,4 +423,5 @@ const wariantyPrices = {
 	"Journey":{"brak": 0,},
 	"Willard":{"brak": 0,},
 	"Willard Kombi":{"brak": 0,},
+	"Stanier":{"brak": 0,},
 };
