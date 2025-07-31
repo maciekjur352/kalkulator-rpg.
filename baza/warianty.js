@@ -421,7 +421,17 @@ const wariantyPrices = {
         "Cabrio":15000
     },
 	"Journey":{"brak": 0,},
-	"Willard":{"brak": 0,},
-	"Willard Kombi":{"brak": 0,},
+	"Willard":{
+		"brak": 0,
+		"Szyberach": 10000,
+		"Relingi": 5000,
+		"Szyberdach + relingi": 15000,
+	},
+	"Willard Kombi":{
+		"brak": 0,
+		"Szyberach": 10000,
+		"Relingi": 5000,
+		"Szyberdach + relingi": 15000,
+	},
 	"Stanier":{"brak": 0,},
 };

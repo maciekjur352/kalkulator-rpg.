@@ -203,11 +203,13 @@ const tuningPrices = {
     //bodykity
     "Admiral":{
         "brak": 0,
-        "Admiral STR": 30000,
+        "Admiral STR": 35000,
+        "Admiral STR Aero": 35000,
     },
     "Admiral Kombi":{
         "brak": 0,
-        "Admiral STR": 30000,
+        "Admiral STR": 35000,
+        "Admiral STR Aero": 35000,
     },
     "Alpha" : {
         "brak": 0,
@@ -585,8 +587,19 @@ const tuningPrices = {
     "Slamvan":{"brak": 0,},
     "Voodoo":{"brak": 0,},
     "Journey":{"brak": 0,},
-    "Willard":{"brak": 0,},
-    "Willard Kombi":{"brak": 0,},
+    "PCJ-600 XR":{"brak": 0,},
+    "Willard":{
+        "brak": 0,
+        "VLV": 30000,
+        "VLV Custom": 65000,
+        "VLV Custom Aero": 68500,
+    },
+    "Willard Kombi":{
+        "brak": 0,
+        "VLV": 30000,
+        "VLV Custom": 65000,
+        "VLV Custom Aero": 68500,
+    },
 
     "Po": {
         "0.0": 0,

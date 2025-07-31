@@ -46,6 +46,7 @@ const vehicles = {
         'Stallion' : 75000,
         'Stallion GTT' : 93000,
         'Stratum' : 55000,//apk
+        'Stanier' : 120000,
         'Sunrise' : 20000,//apk
         'Tahoma' : 60000, //body//apk
         'Vincent' : 28000, //body//apk
@@ -55,7 +56,6 @@ const vehicles = {
         'Windsor' : 120000,
         'Willard' : 44000,
         'Willard Kombi' : 44000,
-        'Stanier' : 120000,
     },
     "Salon Downtown": {
         'Alpha' : 110000, //body
@@ -129,6 +129,7 @@ const vehicles2 = {
         "FCR-900": 185000,
         "Freeway": 100000,
         "PCJ-600": 125000, 
+        "PCJ-600 XR": 600000, 
         "Quadbike": 70000, 
         "Sanchez": 60000, 
         "Wayfarer": 52000,
