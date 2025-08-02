@@ -297,7 +297,7 @@ const tuningPrices = {
     },
     "Fortune":{
         "brak": 0,
-        "Rocket Bunny": 1000000,
+        "Rocket Bunny": 100000,
     },
     "Elegy":{
         "brak": 0,
@@ -628,3 +628,4 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
+
