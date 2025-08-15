@@ -131,6 +131,9 @@ const przednielampyPrices = {				//PRZEDNIE LAMPY
 	"Sunrise":{
 		"brak": 0,
 	},
+	"Sunrise Kombi":{
+		"brak": 0,
+	},
 	"Tahoma":{
 		"brak": 0,
 	},

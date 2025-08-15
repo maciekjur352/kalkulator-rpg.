@@ -187,6 +187,11 @@ const wariantyPrices = {
 	},
 	"Sunrise":{
 		"brak": 0,
+		"Szyberdach": 10000,
+	},
+	"Sunrise Kombi":{
+		"brak": 0,
+		"Szyberdach": 10000,
 	},
 	"Tahoma":{
 		"brak": 0,
@@ -418,7 +423,7 @@ const wariantyPrices = {
 	},
     "Hermes":{
         "brak":0,
-        "Cabrio":15000
+        "Cabrio":15000,
     },
 	"Journey":{"brak": 0,},
 	"Willard":{

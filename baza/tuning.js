@@ -555,7 +555,16 @@ const tuningPrices = {
     "Stallion":{"brak": 0,},
     "Stallion GTT":{"brak": 0,},
     "Stratum":{"brak": 0,},
-    "Sunrise":{"brak": 0,},
+    "Sunrise":{
+        "brak": 0,
+        "Sunrise Base": 15000,
+        "Sunrise GTS": 45000,
+    },
+    "Sunrise Kombi":{
+        "brak": 0,
+        "Sunrise Base": 15000,
+        "Sunrise GTS": 45000,
+    },
     "Virgo":{"brak": 0,},
     "Washington":{"brak": 0,},
     "Windsor":{"brak": 0,},
@@ -586,7 +595,10 @@ const tuningPrices = {
     "Savanna":{"brak": 0,},
     "Slamvan":{"brak": 0,},
     "Voodoo":{"brak": 0,},
-    "Journey":{"brak": 0,},
+    "Journey":{
+        "brak": 0,
+        "Journey FL": 14000,
+    },
     "PCJ-600 XR":{"brak": 0,},
     "Willard":{
         "brak": 0,
@@ -628,4 +640,3 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
-

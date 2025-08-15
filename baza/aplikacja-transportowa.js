@@ -104,6 +104,11 @@ const ApkPrices = {
         "APK": 15000,
         "APK PRO": 30000,
     },
+    "Sunrise Kombi": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
     "Tahoma": {
         "brak": 0,
         "APK": 15000,

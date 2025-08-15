@@ -48,6 +48,7 @@ const vehicles = {
         'Stratum' : 55000,//apk
         'Stanier' : 120000,
         'Sunrise' : 20000,//apk
+        'Sunrise Kombi' : 20000,//apk
         'Tahoma' : 60000, //body//apk
         'Vincent' : 28000, //body//apk
         'Vincent Kombi' : 28000,//apk
@@ -423,6 +424,8 @@ function calculateTotal(event) {
     total6 += tylnelampyPrices[vehicle][tylnelampy];
   if (przednielampyPrices[vehicle] && przednielampyPrices[vehicle][przednielampy])
     total6 += przednielampyPrices[vehicle][przednielampy];
+  if (wariantyPrices[vehicle] && wariantyPrices[vehicle][warianty])
+    total6 += wariantyPrices[vehicle][warianty];
 
   const total_znizka5 = applyDiscount(total6, "myRange4", "demo4", "znizka5", "Wartość Wizu");
   const total_znizka6 = applyDiscount(tuningPrices["lampy"][lampy], "myRange5", "demo5", "znizka6", "Wartość Lampy");
@@ -506,7 +509,7 @@ function calculateTotal2(event) {
 // Funkcja wyszukiwania opcji wewnątrz wybranych selectów
 function searchOption() {
   const searchValue = document.getElementById('search').value.toLowerCase();
-  const selects = ['Reflektory', 'progi', 'Wydechy', 'Wentyle', 'Maski', 'Dachy', 'spojlery', 'ZderzakiPrzednie','ZderzakiTylne'];
+  const selects = ['Reflektory', 'progi', 'Wydechy', 'Wentyle', 'Maski', 'Dachy', 'spojlery', 'ZderzakiPrzednie','ZderzakiTylne' ,  'warianty'];
   let found = false;
   for (let selectId of selects) {
     const selectElement = document.getElementById(selectId);
