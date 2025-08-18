@@ -453,6 +453,9 @@ const tuningPrices = {
         "brak": 0,
         "STR": 100000,
     },
+    "Feltzer GT":{
+		"brak": 0,
+	},
     "Sanchez":{
         "brak": 0,
         "SM": 35000,

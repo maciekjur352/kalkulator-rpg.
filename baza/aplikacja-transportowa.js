@@ -210,6 +210,7 @@ const ApkPrices = {
     "Club":{"brak":0},
     "Euros":{"brak":0},
     "Feltzer":{"brak":0},
+    "Feltzer GT":{"brak": 0,},
     "Fortune":{"brak":0},
     "Fortune 240SX":{"brak":0},
     "Majestic":{"brak":0},

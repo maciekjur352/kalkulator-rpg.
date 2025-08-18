@@ -101,6 +101,11 @@ const wariantyPrices = {
 		"Cabrio": 15000,
 		"Twardy dach z szyberdachem": 25000,
 	},
+	"Feltzer GT":{
+		"Twardy dach z szyberdachem": 0,
+		"brak": 1000,
+		"Cabrio": 15000,
+	},
 	"Fortune":{
 		"brak": 0,
 	},

@@ -25,6 +25,7 @@ const vehicles = {
         'Emperor' : 30000,//apk
         'Euros' : 65000, //body
         'Feltzer' : 100000, //body
+        'Feltzer GT' : 270000,
         'Fortune' :	38000, //body
         'Fortune 240SX'	: 110000,
         'Glendale' : 35000,//apk

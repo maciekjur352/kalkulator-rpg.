@@ -68,6 +68,9 @@ const przednielampyPrices = {				//PRZEDNIE LAMPY
 	"Feltzer":{
 		"brak": 0,
 	},
+	"Feltzer GT":{
+		"brak": 0,
+	},
 	"Fortune":{
 		"brak": 0,
 	},
