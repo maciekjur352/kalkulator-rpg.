@@ -43,6 +43,7 @@ const wariantyPrices = {
 	},
 	"Previon":{
 		"brak": 0,
+		"Szyberdach": 10000,
 	},
 	"Sadler":{
 		"brak": 0,
