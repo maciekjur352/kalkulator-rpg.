@@ -506,7 +506,10 @@ const tuningPrices = {
     },
     "BF-400":{"brak": 0,},
     "Faggio":{"brak": 0,},
-    "FCR-900":{"brak": 0,},
+    "FCR-900":{
+        "brak": 0,
+        "Sport": 50000,
+    },
     "Freeway":{"brak": 0,},
     "PCJ-600":{"brak": 0,}, 
     "Wayfarer":{"brak": 0,},
@@ -662,3 +665,4 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
+
