@@ -79,6 +79,7 @@ const wariantyPrices = {
 	},
 	"Cadrona":{
 		"brak": 0,
+		"Cabrio": 10000,
 	},
 	"Club":{
 		"brak": 0,

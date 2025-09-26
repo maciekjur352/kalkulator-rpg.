@@ -542,7 +542,12 @@ const tuningPrices = {
     },
     "Sadler":{"brak": 0,},
     "Buccaneer":{"brak": 0,},
-    "Cadrona":{"brak": 0,},
+    "Cadrona":{
+        "brak": 0,
+        "GTC": 18000,
+        "Krieger": 65000,
+        "Krieger Aero": 70000,
+    },
     "Elegant":{
         "brak": 0,
         "Elegant Custom": 68000,
@@ -665,4 +670,3 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
-
