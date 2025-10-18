@@ -597,7 +597,17 @@ const tuningPrices = {
     },
     "Virgo":{"brak": 0,},
     "Washington":{"brak": 0,},
-    "Windsor":{"brak": 0,},
+
+    "Windsor":{
+        "brak": 0,
+        "Classic": 5000,
+        "GT": 20000,
+        "Restomod": 80000,
+        "Sportback": 10000,
+        "Sportback GT": 28000,
+        "Sportback Restomod": 90000,
+    },
+
     "Camper":{"brak": 0,},
     "Infernus":{"brak": 0,},
     "Uranus":{"brak": 0,},
