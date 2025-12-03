@@ -146,6 +146,7 @@ const colorMap = {
   "Limonka": "rgb(147, 246, 0)",
   "Różowy": "rgb(255, 140, 240)",
   "Niebieski": "rgb(0, 0, 255)",
+  "Czarny": "rgba(27, 27, 27, 1)",
   "Zielony": "rgb(20, 140, 0)",
   "Fioletowy": "rgb(128, 0, 128)",
   "Czerwony": "rgb(255, 0, 0)",
@@ -536,4 +537,5 @@ document.addEventListener("DOMContentLoaded", function() {
   initSliders();
   // Upewnij się, że wartości sliderów są ustawione przed wywołaniem kalkulacji
   calculateTotal2();
+
 });
