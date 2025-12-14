@@ -214,6 +214,14 @@ const wariantyPrices = {
 	},
 	"Washington":{
 		"brak": 0,
+		"Szyberdach": 10000,
+	},
+	"Washington kombi":{
+		"brak": 0,
+		"Szyberdach": 10000,
+		"Relingi": 5000,
+		"Szyberdach + relingi": 15000,
+		"Szyberdach + Bagażnik dachowy": 20000,
 	},
 	"Windsor":{
 		"brak": 0,

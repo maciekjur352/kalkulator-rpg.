@@ -129,6 +129,11 @@ const ApkPrices = {
         "APK": 15000,
         "APK PRO": 30000,
     },
+    "Washington Kombi": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
     "Rancher Long": {
         "brak": 0,
         "APK": 15000,

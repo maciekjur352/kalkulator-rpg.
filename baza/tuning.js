@@ -610,7 +610,16 @@ const tuningPrices = {
         "Sunrise GTS": 45000,
     },
     "Virgo":{"brak": 0,},
-    "Washington":{"brak": 0,},
+    "Washington":{
+        "brak": 0,
+        "Washington Modern": 24000,
+        "Washington Sportspec": 54000,
+    },
+    "Washington Kombi":{
+        "brak": 0,
+        "Washington Modern": 24000,
+        "Washington Sportspec": 54000,
+    },
 
     "Windsor":{
         "brak": 0,
