@@ -199,6 +199,16 @@ const ApkPrices = {
         "APK": 15000,
         "APK PRO": 30000,
     },
+    "Celsion": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
+    "Speedvan": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
     "Bobcat":{"brak":0},
     "Bravura":{"brak":0},
     "Clover":{"brak":0},

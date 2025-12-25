@@ -19,7 +19,8 @@ const vehicles = {
         "Admiral Kombi": 42000,//apk
         'Blista Compact' : 76000,//body
         'Buccaneer' : 33000, 
-        'Cadrona': 30000, 
+        'Cadrona': 30000,
+        'Celsion': 140000, //apk
         'Club' : 76000 ,//body
         'Elegant' : 38000,//apk
         'Emperor' : 30000,//apk
@@ -105,12 +106,13 @@ const vehicles = {
         'Sandking' : 240000, //body
         'Yosemite' : 85000, //body
     },
-    'Salon z pojazdami dostawczymi': {
+    'Salon dostawczy': {
         'Benson' : 40000, 
         'Boxville' : 52000,//apk
         'Burrito' : 55000,//apk 
         'Mule' : 100000, 
         'Securicar' : 270000,//apk 
+        'Speedvan': 120000,//apk
         'Yankee' : 178000, 
     },
     'Salon Lowriderów': {
@@ -130,6 +132,7 @@ const vehicles2 = {
         "BF-400": 115000,
         "Faggio": 28000,
         "FCR-900": 185000,
+        "FCR-900 RR": 850000,
         "Freeway": 100000,
         "PCJ-600": 125000, 
         "PCJ-600 XR": 600000, 

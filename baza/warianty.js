@@ -454,4 +454,15 @@ const wariantyPrices = {
 		"Szyberdach + relingi": 15000,
 	},
 	"Stanier":{"brak": 0,},
+	"Celsion":{
+		"brak": 0,
+		"Lotka na dachu": 5000,
+		"Szyberdach": 10000,
+		"Szyberdach + lotka na dachu": 15000,
+	},
+	"Speedvan":{
+		"brak": 0,
+		"Reflektory + spojler": 12500,
+		"Bagażnik dachowy": 15000,
+	},
 };
