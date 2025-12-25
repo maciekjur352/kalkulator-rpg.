@@ -422,10 +422,12 @@ const tuningPrices = {
     "Schafter":{
         "brak": 0,
         "STR": 100000,
+		"EVO": 120000,
     },
     "Schafter Kombi":{
         "brak": 0,
         "STR": 100000,
+		"EVO": 120000,
     },
     "Vincent":{
         "brak": 0,
@@ -733,3 +735,4 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
+
