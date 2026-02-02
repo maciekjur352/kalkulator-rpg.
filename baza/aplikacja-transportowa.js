@@ -209,6 +209,16 @@ const ApkPrices = {
         "APK": 15000,
         "APK PRO": 30000,
     },
+    "Regina": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
+    "Regina Sedan": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
     "Bobcat":{"brak":0},
     "Bravura":{"brak":0},
     "Clover":{"brak":0},

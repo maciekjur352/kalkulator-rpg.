@@ -39,6 +39,8 @@ const vehicles = {
         'Premier' : 63000,//apk
         'Primo' : 26000, //body//apk
         'Primo Kombi' : 26000,//apk
+        'Regina' : 37000,//apk
+        'Regina Sedan' : 37000,//apk
         'Sabre' : 58000, //body
         'Schafter' : 125000, //body//apk
         'Schafter Kombi' : 125000,//apk

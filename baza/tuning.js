@@ -422,12 +422,12 @@ const tuningPrices = {
     "Schafter":{
         "brak": 0,
         "STR": 100000,
-		"EVO": 120000,
+        "EVO": 120000,
     },
     "Schafter Kombi":{
         "brak": 0,
         "STR": 100000,
-		"EVO": 120000,
+        "EVO": 120000,
     },
     "Vincent":{
         "brak": 0,
@@ -706,7 +706,16 @@ const tuningPrices = {
         "Offroad": 50000,
         "Hi-Top Offroad": 57500,
     },
+    "Regina":{
+        "brak": 0,
+        "Turbo": 30000,
+    },
+    "Regina Sedan":{
+        "brak": 0,
+        "Turbo": 30000,
+    },
 
+    // tuning
 
     "Po": {
         "0.0": 0,
@@ -735,4 +744,3 @@ const tuningPrices = {
         "Duże": 22500,
     }
 };
-

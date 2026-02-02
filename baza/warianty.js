@@ -465,4 +465,16 @@ const wariantyPrices = {
 		"Reflektory + spojler": 12500,
 		"Bagażnik dachowy": 15000,
 	},
+	"Regina":{
+		"brak": 0,
+		"Bagażnik dachowy": 7500,
+		"Bagażnik dachowy z bagażem #1": 10000,
+		"Bagażnik dachowy z bagażem #2": 10000,
+		"Bagażnik dachowy z bagażem #3": 10000,
+	},
+	"Regina Sedan":{
+		"brak": 0,
+		"Bagażnik dachowy": 7500,
+		"Bagażnik dachowy z bagażem": 10000,
+	}
 };
