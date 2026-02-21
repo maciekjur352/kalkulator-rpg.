@@ -194,26 +194,107 @@ const colorMap = {
 
 // --- Funkcja pomocnicza (globalna) do wypełniania selectów ---
 function populateOptions(selectElement, options) {
-  selectElement.innerHTML = "";
   if (options && typeof options === "object") {
-    for (const [key] of Object.entries(options)) {
-      const option = document.createElement("option");
-      option.value = key;
-      option.textContent = key;
-
-      // Jeśli to select lampy, ustaw kolor
-      if (
-        selectElement.id === "lampy" ||
-        selectElement.id === "lampy2" ||
-        selectElement.id === "licznik" ||
-        selectElement.id === "licznik2"
-      ) {
-        if (colorMap[key]) {
-          option.style.color = colorMap[key];
-        }
+    
+    if (selectElement.id === "bodykit" || selectElement.id === "bodykit2") {
+      const allKeys = Object.keys(options);
+      
+      // Szukana najkrótszej nazwy bazowej
+      function getTopLevelBase(key) {
+        if (key === "brak") return null;
+        let bases = allKeys.filter(k => k !== "brak" && k !== key && key.startsWith(k + " "));
+        if (bases.length === 0) return null; 
+        return bases.reduce((a, b) => a.length <= b.length ? a : b);
       }
 
-      selectElement.appendChild(option);
+      //sprawdza czy bodykit ma jakieś pod-wersje
+      function checkHasChildren(parentKey) {
+        return allKeys.some(k => k !== "brak" && k !== parentKey && k.startsWith(parentKey + " "));
+      }
+
+      function renderBodykits(selectedValue, targetSelect) {
+        targetSelect.innerHTML = "";
+        
+        let topBase = getTopLevelBase(selectedValue);
+        let selectedHasChildren = checkHasChildren(selectedValue);
+        
+        let activeBase = "brak";
+        if (topBase !== null) {
+          activeBase = topBase; 
+        } else if (selectedHasChildren) {
+          activeBase = selectedValue; 
+        } else {
+          activeBase = "brak"; 
+        }
+
+        const brakOpt = document.createElement("option");
+        brakOpt.value = "brak";
+        brakOpt.textContent = activeBase === "brak" ? "brak" : "↩ Wróć do głównych";
+        targetSelect.appendChild(brakOpt);
+
+        allKeys.forEach(key => {
+          if (key === "brak") return;
+          
+          let keyTopBase = getTopLevelBase(key);
+          
+          if (activeBase === "brak") {
+            if (keyTopBase === null) {
+              const option = document.createElement("option");
+              option.value = key;
+              
+              // dodaje strzałkę na końcu
+              let hasKits = checkHasChildren(key);
+              option.textContent = hasKits ? key + " ↪" : key;
+              
+              targetSelect.appendChild(option);
+            }
+          } else {
+            if (key === activeBase || keyTopBase === activeBase) {
+              const option = document.createElement("option");
+              option.value = key;
+              
+              let prefix = key === activeBase ? "" : "   ↪ ";
+
+              option.textContent = prefix + key;
+              targetSelect.appendChild(option);
+            }
+          }
+        });
+        
+        targetSelect.value = selectedValue;
+      }
+
+      const newSelect = selectElement.cloneNode(true);
+      selectElement.parentNode.replaceChild(newSelect, selectElement);
+      
+      renderBodykits("brak", newSelect);
+
+      newSelect.addEventListener("change", function(e) {
+        renderBodykits(e.target.value, newSelect);
+      });
+      
+    } 
+    //LOGIKA DLA POZOSTAŁYCH ELEMENTÓW
+    else {
+      selectElement.innerHTML = "";
+      for (const [key] of Object.entries(options)) {
+        const option = document.createElement("option");
+        option.value = key;
+        option.textContent = key;
+
+        if (
+          selectElement.id === "lampy" ||
+          selectElement.id === "lampy2" ||
+          selectElement.id === "licznik" ||
+          selectElement.id === "licznik2"
+        ) {
+          if (colorMap[key]) {
+            option.style.color = colorMap[key];
+          }
+        }
+
+        selectElement.appendChild(option);
+      }
     }
   }
 }
