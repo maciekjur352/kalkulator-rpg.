@@ -299,6 +299,8 @@ const wariantyPrices = {
 	},
 	"Uranus":{
 		"brak": 0,
+		"Czarny dach": 7500,
+		"Targa": 15000,
 	},
 	"ZR-350":{
 		"brak": 0,
