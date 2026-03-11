@@ -398,6 +398,9 @@ document.getElementById("vehicle").addEventListener("change", function() {
       populateOptions(selectEl, data);
     }
   });
+  if (zapamietaneDaneZForum) {
+      autoWypelnianie(zapamietaneDaneZForum);
+  }
 });
 
 // --- Obsługa selectów dla kalkulatora bike ---
@@ -619,9 +622,160 @@ function searchOption() {
   }
 }
 
-// --- Inicjalizacja po załadowaniu DOM ---
 document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const odebraneDane = urlParams.get('dane'); 
+
+  if (odebraneDane) {
+      console.log("Pomyślnie odebrano dane z forum!");
+      zapamietaneDaneZForum = odebraneDane; 
+  }
   initSliders();
-  // Upewnij się, że wartości sliderów są ustawione przed wywołaniem kalkulacji
-  calculateTotal2();
 });
+
+function handleImportedData() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const data = urlParams.get('import');
+
+    if (data) {
+        const container = document.getElementById('import-container');
+        const textField = document.getElementById('import-text');
+
+        if (container && textField) {
+            container.style.display = 'block';
+            textField.textContent = data;
+            container.scrollIntoView({ behavior: 'smooth' });
+            console.log("Dane pomyślnie zaimportowane!");
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    handleImportedData();
+    initSliders();
+});
+
+let zapamietaneDaneZForum = null;
+
+function autoWypelnianie(dane) {
+    console.log("Rozpoczynam auto-uzupełnianie na podstawie danych: \n", dane);
+    function wybierzOpcjePoTekscie(selectId, szukanyTekst) {
+        const selectElement = document.getElementById(selectId);
+        if (!selectElement) return;
+
+        const szukanyLower = szukanyTekst.toLowerCase().trim();
+        for (let option of selectElement.options) {
+            if (option.text.toLowerCase().includes(szukanyLower)) {
+                selectElement.value = option.value;
+                console.log(`[SUKCES] Wybrano w ${selectId} opcję: ${option.text}`);
+                break;
+            }
+        }
+    }
+// Pomocnicza funkcja dla Checkboxów
+    function zaznaczCheckbox(id, zaznacz) {
+        const cb = document.getElementById(id);
+        if (cb) {
+            cb.checked = zaznacz;
+            if(zaznacz) console.log(`[SUKCES] Zaznaczono checkbox: ${id}`);
+        }
+    }
+    // Silnik
+    const engineMatch = dane.match(/\((\d\.\d)dm³\)/);
+    if (engineMatch) wybierzOpcjePoTekscie('engine', engineMatch[1]);
+    // ECU
+    const ecuMatch = dane.match(/ECU \(([^)]+)\)/);
+    if (ecuMatch) wybierzOpcjePoTekscie('ecu', ecuMatch[1]);
+    // Turbo
+    const turboMatch = dane.match(/Turbo \(([^)]+)\)/);
+    if (turboMatch) wybierzOpcjePoTekscie('turbo', turboMatch[1]);
+    // CFI
+    const cfiMatch = dane.match(/C\.F\.I \(([^)]+)\)/);
+    if (cfiMatch) wybierzOpcjePoTekscie('cfi', cfiMatch[1]);
+    // Zestaw
+    const zestawMatch = dane.match(/Zestaw \(([^)]+)\)/);
+    if (zestawMatch) {
+        const litera = zestawMatch[1];
+        if (litera === 'T') wybierzOpcjePoTekscie('zestaw', 'Torowy');
+        else if (litera === 'D') wybierzOpcjePoTekscie('zestaw', 'Drifterski');
+        else if (litera === 'W') wybierzOpcjePoTekscie('zestaw', 'Wyścigowy');
+        else if (litera === 'U') wybierzOpcjePoTekscie('zestaw', 'Uliczny');
+    }
+    // Napęd
+    const napedMatch = dane.match(/Przeniesienie napędu \(([^)]+)\)/);
+    if (napedMatch) {
+        wybierzOpcjePoTekscie('naped', napedMatch[1]);
+    } else if (dane.includes("Moduł zmiany napędu")) {
+        wybierzOpcjePoTekscie('naped', 'MZN');
+    }
+    //bak
+    const bakMatch = dane.match(/Powiększony bak \((\d+)l\)/i);
+    if (bakMatch) wybierzOpcjePoTekscie('bakPaliwa', bakMatch[1] + 'L');
+    //LPG
+    const lpgMatch = dane.match(/Butla LPG \((\d+)l\)/i);
+    if (lpgMatch) wybierzOpcjePoTekscie('lpg', lpgMatch[1] + 'L');
+    // Gwint_Hydraulika
+    if (dane.includes("Gwint. zawieszenie")) wybierzOpcjePoTekscie('dodatki', 'Gwintowane zawieszenie');
+    else if (dane.includes("Hydraulika")) wybierzOpcjePoTekscie('dodatki', 'Hydraulika');
+    //APK
+    if (dane.includes("Aplikacja transportowa PRO")) {
+        wybierzOpcjePoTekscie('apk', 'APK PRO');
+    } else if (dane.includes("Aplikacja transportowa")) {
+        wybierzOpcjePoTekscie('apk', 'APK');
+    }
+    // Felgi
+    const felgiMatch = dane.match(/Felgi\s+([^\(]+?)\s*\(\d+\)/);
+    if (felgiMatch) wybierzOpcjePoTekscie('felgi', felgiMatch[1]);
+    // Poszerzenia
+    const poMatch = dane.match(/Poszerzenia \(([\d,]+)\)/);
+    if (poMatch) {
+        const wymiar = poMatch[1].replace(',', '.');
+        wybierzOpcjePoTekscie('Po', wymiar);
+    }
+    // Rozmiar felg
+    const rozmFelgMatch = dane.match(/Rozmiar felg \(([^)]+)\)/);
+    if (rozmFelgMatch) wybierzOpcjePoTekscie('Felgi', rozmFelgMatch[1]);
+    // Szyby
+    const szybyMatch = dane.match(/Przyciemnienie szyb \((\d+%)\)/);
+    if (szybyMatch) wybierzOpcjePoTekscie('szyby', szybyMatch[1]);
+    // Spoiler
+    const spoilerMatch = dane.match(/Spoiler \(([^)]+)\)/i);
+    if (spoilerMatch) wybierzOpcjePoTekscie('spojlery', spoilerMatch[1]);
+    // Reflektory
+    const reflMatch = dane.match(/Reflektory \(([^)]+)\)/i);
+    if (reflMatch) wybierzOpcjePoTekscie('Reflektory', reflMatch[1]);
+    // Progi
+    const progiMatch = dane.match(/Progi \(([^)]+)\)/i);
+    if (progiMatch) wybierzOpcjePoTekscie('progi', progiMatch[1]);
+    // Wydech
+    const wydechMatch = dane.match(/Wydech \(([^)]+)\)/i);
+    if (wydechMatch) wybierzOpcjePoTekscie('Wydechy', wydechMatch[1]);
+    // Wentyle
+    const wentyleMatch = dane.match(/Wentyle \(([^)]+)\)/i);
+    if (wentyleMatch) wybierzOpcjePoTekscie('Wentyle', wentyleMatch[1]);
+    // Maska
+    const maskaMatch = dane.match(/Maska \(([^)]+)\)/i);
+    if (maskaMatch) wybierzOpcjePoTekscie('Maski', maskaMatch[1]);
+    // Dach
+    const dachMatch = dane.match(/Dach \(([^)]+)\)/i);
+    if (dachMatch) wybierzOpcjePoTekscie('Dachy', dachMatch[1]);
+    // Przednie lampy
+    const przednieLampyMatch = dane.match(/Przednie lampy \(([^)]+)\)/i);
+    if (przednieLampyMatch) wybierzOpcjePoTekscie('przednielampy', przednieLampyMatch[1]);
+    // Tylne lampy
+    const tylneLampyMatch = dane.match(/Tyln[ie] lampy \(([^)]+)\)/i);
+    if (tylneLampyMatch) wybierzOpcjePoTekscie('tylnelampy', tylneLampyMatch[1]);
+    // Zderzak przedni
+    const przZderzakMatch = dane.match(/Przedni zderzak \(([^)]+)\)/i);
+    if (przZderzakMatch) wybierzOpcjePoTekscie('ZderzakiPrzednie', przZderzakMatch[1]);
+    // Zderzak tylny
+    const tylZderzakMatch = dane.match(/Tylny zderzak \(([^)]+)\)/i);
+    if (tylZderzakMatch) wybierzOpcjePoTekscie('ZderzakiTylne', tylZderzakMatch[1]);
+    
+    zaznaczCheckbox('dodatki4', dane.includes("Ogranicznik prędkości"));
+    zaznaczCheckbox('dodatki5', dane.includes("Wykrywacz fotoradarów"));
+    zaznaczCheckbox('dodatki6', dane.includes("System ABS"));
+    zaznaczCheckbox('dodatki3', dane.includes("CB-Radio"));
+    const maZwykleRadio = /(?:^|[^\w-])Radio(?:[^\w-]|$)/.test(dane);
+    zaznaczCheckbox('dodatki2', maZwykleRadio);
+}
