@@ -1,4 +1,4 @@
-const wariantyPrices = {
+wariantyPrices = {
 	"Bobcat":{				//Cygan
 		"brak": 0,
 		"Koło zapasowe": 3000,
@@ -132,6 +132,11 @@ const wariantyPrices = {
 	},
 	"Nebula":{
 		"brak": 0,
+	},
+	"Nebula Kombi":{
+		"brak": 0,
+		"Relingi": 5000,
+		"Relingi + Bagażnik dachowy": 10000,
 	},
 	"Premier":{
 		"brak": 0,

@@ -586,7 +586,22 @@ const tuningPrices = {
         "Merit Prestige": 56000,
         "Merit Sport": 86000,
     },
-    "Nebula":{"brak": 0,},
+    "Nebula":{
+        "brak": 0,
+        "Nebula LB": 16000,
+        "Nebula LB RS Aero": 44000,
+        "Nebula LB GTE Aero": 58000,
+        "Nebula RS": 40000,
+        "Nebula GTE": 54000,
+    },
+    "Nebula Kombi":{
+        "brak": 0,
+        "Nebula LB": 16000,
+        "Nebula LB RS Aero": 44000,
+        "Nebula LB GTE Aero": 58000,
+        "Nebula RS": 40000,
+        "Nebula GTE": 54000,
+    },
     "Premier":{"brak": 0,},
     "Solair":{
         "brak": 0,

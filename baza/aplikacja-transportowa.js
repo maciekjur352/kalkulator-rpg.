@@ -54,6 +54,11 @@ const ApkPrices = {
         "APK": 15000,
         "APK PRO": 30000,
     },
+    "Nebula Kombi": {
+        "brak": 0,
+        "APK": 15000,
+        "APK PRO": 30000,
+    },
     "Premier": {
         "brak": 0,
         "APK": 15000,

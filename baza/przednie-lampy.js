@@ -95,6 +95,9 @@ const przednielampyPrices = {				//PRZEDNIE LAMPY
 	"Nebula":{
 		"brak": 0,
 	},
+	"Nebula Kombi":{
+		"brak": 0,
+	},
 	"Premier":{
 		"brak": 0,
 	},
@@ -317,5 +320,6 @@ const przednielampyPrices = {				//PRZEDNIE LAMPY
 	"Journey":{"brak":0},
 	"Stanier":{"brak":0},
 	"Willard":{"brak":0},
-	"Willard Kombi":{"brak":0}
+	"Willard Kombi":{"brak":0},
+	"Speedvan":{"brak":0}
 };
