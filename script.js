@@ -36,6 +36,7 @@ const vehicles = {
         'Manana DTM' : 88000,
         'Merit' : 70000,//apk
         'Nebula' : 38000,//apk
+        'Nebula Kombi' : 38000,//apk
         'Premier' : 63000,//apk
         'Primo' : 26000, //body//apk
         'Primo Kombi' : 26000,//apk
