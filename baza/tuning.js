@@ -152,7 +152,10 @@ const tuningPrices = {
         "LIMITOWANE Kobaltowe": 100000,  
         "LIMITOWANE Dyniowe": 150000,
         "LIMITOWANE Trujące": 150000,
-        "LIMITOWANE Cukierkowy róż": 120000, 
+        "LIMITOWANE Cukierkowy róż": 120000,
+        "LIMITOWANE Jasny Teal": 150000, 
+        "LIMITOWANE Navy": 160000, 
+        "LIMITOWANE Galaktyczne": 200000, 
     },
     "licznik":{
         "brak": 0,
@@ -200,6 +203,9 @@ const tuningPrices = {
         "LIMITOWANE Dyniowe": 90000,
         "LIMITOWANE Trujące": 90000,
         "LIMITOWANE Cukierkowy róż": 70000,
+        "LIMITOWANE Jasny Teal": 90000, 
+        "LIMITOWANE Navy": 100000, 
+        "LIMITOWANE Galaktyczne": 150000, 
     },
     //bodykity
     "Admiral":{
