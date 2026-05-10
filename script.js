@@ -190,7 +190,10 @@ const colorMap = {
   "LIMITOWANE Kobaltowe": "#0047ab",
   "LIMITOWANE Dyniowe": "#e37e0b",
   "LIMITOWANE Trujące": "#46bd0b",
-  "LIMITOWANE Cukierkowy róż": "#fa8072"
+  "LIMITOWANE Cukierkowy róż": "#fa8072",
+  "LIMITOWANE Jasny Teal": "#81d8d0", 
+  "LIMITOWANE Navy": "#322964", 
+  "LIMITOWANE Galaktyczne": "#7864ff"
 };
 
 // --- Funkcja pomocnicza (globalna) do wypełniania selectów ---
